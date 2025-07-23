@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
     // if ($user && password_verify($password, $user["mdp"])) {
-        if ($user && $username == $user['name']&& password_verify($password,$user['mdp'])) {
+        if ($user && $username == $user['name']&& md5($password) === $user['mdp']) {
         $_SESSION["user_id"] = $user["id"];
         $_SESSION["name"] = $user["name"];
         header("Location: ../?action=list_pesse");

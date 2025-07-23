@@ -32,6 +32,7 @@ $(document).ready(function (){
       }
     })
   }
+  setInterval("fetchPess()",500);
    var timer = 0;
    function set_interval() {
      timer = setInterval("auto_logout()", 36000000);

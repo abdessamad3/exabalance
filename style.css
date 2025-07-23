@@ -442,7 +442,7 @@
  /*pess list*/
  .left{
     width: 60%;
-    height : 110vh;
+    /* height : 110vh; */
     FLOAT: LEFT;
     padding: 5px;
     margin-bottom: 25px;
@@ -453,7 +453,7 @@
  }
  .right{
     width: 35%;
-    height : 110vh;
+    /* height : 110vh; */
     float: right;
     padding: 5px;
     margin-bottom: 25px;
@@ -604,10 +604,37 @@
     background-color: transparent !important;
 }
 
+.bottom_pesse{
+    clear : both;
+}
 /*invoice*/
-.container_invoice{
+#container_invoice{
+    display: none;
+    width: 700px;
+}
+.head_invoice{
+    text-align : center;
+}
+.invoice_left{
+    width: 345px;
+    float : left;
+}
+.line  h6, .line p{
+    display: inline-block;
+}
+.invoice_right{
+    width: 300px;
+    float: left;
+}
+.weight_invoice{
+    border: 2px solid;
+    padding : 10px
+}
+/* .container_invoice{
     width : 100%;
 }
+
+
 
 .bottom_pesse{
     clear : both;
@@ -617,7 +644,7 @@
 .head_invoice{
     text-align: center !important;
 }
-.invoice_left{
+/*.invoice_left{
     width: 50%;
     FLOAT: LEFT;
     padding: 5px;
@@ -629,11 +656,21 @@
     padding: 5px;
     margin-bottom: 25px;
 }
+.invoice_left{
+        width: 31%;
+    /* border: 1px solid; 
+    float: left;
+}
+.invoice_right{
+        width: 31%;
+    /* border: 1px solid; 
+    float: left;
+}
 .body_invoice .line{
     display: flex !important;
   align-items: center;
   margin-bottom: 4px;
-  height : 3vh;/* fixed width for alignment */
+  height : 3vh;/* fixed width for alignment 
 }
 .body_invoice h6 {
   margin: 0;
@@ -645,12 +682,13 @@
   margin: 0;
 }
 .weight_invoice{
+    padding: 2px 0;
     border : 1px solid black
 }
 #container_invoice{
     padding: 0 5%;
-    display: none; 
-}
+    /*display: none;
+} */
 
 @media print {
   
@@ -660,17 +698,20 @@
 .container{
     display:none !important;
 }
-  #container_invoice, #container_invoice * {
+  #container_invoice {
     display: block;
   }
   #container_invoice {
     background-color: white;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
+    margin-top: -3px;
+    /* position: absolute; */
+    /* left: 0;
+    top: 0; */
+    /* width: 100%; */
   }
 }
+
+/*login*/
 .invalide_credentials{
     color : red
 }

@@ -185,7 +185,7 @@
         <h6>Tél : 05 35 73 14 23</h6>
     </div>
     <hr>
-    <div class="body_invoice" style='background-color :blueviolet'>
+    <div class="body_invoice" >
         <div class='invoice_left'>
             <div class='line'>
                 <h6>Date D'Entrée : </h6>
@@ -234,31 +234,31 @@
                 <h6>Provenance :</h6>
                 <p ><?=$pesse_by_id['Provenance']?></p>
             </div>
-        </div>
-        <div class="invoice_right weight_invoice">
-            <div class='line'>
-                <h6  >Poids brut :</h6>
-                <?php if($pesse_by_id['PoidsBrut']>= $pesse_by_id['Tare']) {?>
-             <p> <?=$pesse_by_id['PoidsBrut']?></p>
-             <?php } else if(($pesse_by_id['PoidsBrut'] < $pesse_by_id['Tare'])){ ?>
-             <p> <?=$pesse_by_id['Tare']?></p>
-             <?php }?>
-            </div>
-            <div class='line'>
-                <h6 >Tare :</h6>
-                <?php if($pesse_by_id['PoidsBrut']>= $pesse_by_id['Tare']) {?>
-             <p> <?=$pesse_by_id['Tare']?></p>
-             <?php } else if(($pesse_by_id['PoidsBrut'] < $pesse_by_id['Tare'])){ ?>
-             <p> <?=$pesse_by_id['PoidsBrut']?></p>
-                <?php }?>
-            </div>
-            <div class='line'>
-                <h6 >Poids net :</h6>
-                <?php if($pesse_by_id['PoidsBrut']>= $pesse_by_id['Tare']) {?>
-                <p> <?=$pesse_by_id['PoidsBrut'] -    $pesse_by_id['Tare']?></p>
-                <?php } else if(($pesse_by_id['PoidsBrut'] < $pesse_by_id['Tare'])){ ?>
-                <p> <?=$pesse_by_id['Tare'] -    $pesse_by_id['PoidsBrut']?></p>
-                   <?php }?>
+            <div class="weight_invoice">
+                <div class='line'>
+                    <h6  >Poids brut :</h6>
+                    <?php if($pesse_by_id['PoidsBrut']>= $pesse_by_id['Tare']) {?>
+                 <p> <?=$pesse_by_id['PoidsBrut']?></p>
+                 <?php } else if(($pesse_by_id['PoidsBrut'] < $pesse_by_id['Tare'])){ ?>
+                 <p> <?=$pesse_by_id['Tare']?></p>
+                 <?php }?>
+                </div>
+                <div class='line'>
+                    <h6 >Tare :</h6>
+                    <?php if($pesse_by_id['PoidsBrut']>= $pesse_by_id['Tare']) {?>
+                 <p> <?=$pesse_by_id['Tare']?></p>
+                 <?php } else if(($pesse_by_id['PoidsBrut'] < $pesse_by_id['Tare'])){ ?>
+                 <p> <?=$pesse_by_id['PoidsBrut']?></p>
+                    <?php }?>
+                </div>
+                <div class='line'>
+                    <h6 >Poids net :</h6>
+                    <?php if($pesse_by_id['PoidsBrut']>= $pesse_by_id['Tare']) {?>
+                    <p> <?=$pesse_by_id['PoidsBrut'] -    $pesse_by_id['Tare']?></p>
+                    <?php } else if(($pesse_by_id['PoidsBrut'] < $pesse_by_id['Tare'])){ ?>
+                    <p> <?=$pesse_by_id['Tare'] -    $pesse_by_id['PoidsBrut']?></p>
+                       <?php }?>
+                </div>
             </div>
         </div>
         

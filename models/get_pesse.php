@@ -21,12 +21,10 @@ function getpesse(){
     }
     if($data){
         $data = trim(substr($data, strrpos($data, ' ') + 1));
-        fclose($handle);
-        return $data;
     }
     fclose($handle);
     return intval($data);
-}
+} 
 // TODO make this code not be printed in the page
 echo json_encode(getpesse());
 ?>

@@ -47,13 +47,21 @@ function delete_table($id,$table){
 //diver
 //unique data
 function unique($data){
-    $seen = [];
-    $unique = [];
+    $seen = array();
+    $unique = array();
     foreach($data as $item){
         if(!in_array($item['matricule'],$seen)){
-            $seen[] = $item['matricule'];
-            $unique[] = $item;
+            array_push($seen,$item['matricule']);
+            array_push($unique,$item['matricule']);
         }
     }
+    // }$seen = [];
+    // $unique = [];
+    // foreach($data as $item){
+    //     if(!in_array($item['matricule'],$seen)){
+    //         $seen[] = $item['matricule'];
+    //         $unique[] = $item;
+    //     }
+    // }
   return $unique;
 }

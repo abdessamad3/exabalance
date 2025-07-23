@@ -77,7 +77,8 @@ function delete_utilisateur($utilisateur_id){
 }
 function add_utilisateur($utilisateur_data){
     global $db;
-    $utilisateur_data['mdp'] = password_hash($utilisateur_data['mdp'], PASSWORD_BCRYPT);
+    // $utilisateur_data['mdp'] = password_hash($utilisateur_data['mdp'], PASSWORD_BCRYPT);
+    $utilisateur_data['mdp'] = md5($utilisateur_data['mdp']);
     $query = 'INSERT INTO utilisateur (name,email,mdp) VALUES
      (:name,:email,:mdp)';
     $statment = $db->prepare($query);
